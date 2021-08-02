@@ -1,1 +1,1 @@
-<?php include_once(“instruments/instrument_search.html”); ?>
+<?php header( 'Location: /instruments/instrument_search.html' ) ;  ?>
