@@ -1,8 +1,22 @@
+img {
+    margin-right: 30px;
+}
+
 .flex-container {
     display: flex;
-    border: 2px solid #AAA;
+    border: 2px solid #46c3ed;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 5px 10px 5px;
+    background-color: rgba(132, 216, 245, 0.8);
+}
+
+.container {
+    display: flex;
+    border: 2px solid #46c3ed;
+    border-radius: 5px;
+    padding: 0 0 20px 20px;
+    margin-bottom: 10px;
+    background-color: rgba(132, 216, 245, 0.8);
 }
 
 .flex-child {
@@ -12,28 +26,36 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #CCC;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-image: url("resources/workshop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #07071E;
+}
+
+h1 {
+    font-family: "Pacifico", Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 h3 {
-    margin: 0px 0px 8px 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 8px 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: bold;
 }
 
 #get-list{
-    margin-top: 30px;
-    border: 2px solid #AAA;
-    background-color: #BBB;
+    margin-top: 10px;
+    border: 2px solid #46c3ed;
+    background-color: #84d8f5;
     -webkit-appearance: none;
     font-weight: bold;
     padding: 5px;
 }
 
 #get-list:hover {
-  background-color: #AAA;
+  background-color: #46c3ed;
 }
 
 .selection {
@@ -45,7 +67,7 @@ h3 {
     background: none;
     -webkit-appearance: none;
     font-size: 0.7em;
-    color: #555;
+    color: #042929;
 }
 .select-all:hover, .deselect-all:hover {
   color: #000;
@@ -66,15 +88,15 @@ th, td {
 }
 
 th {
-    background-color: #888;
+    background-color: rgba(25, 74, 129, 0.8);
     color: white;
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background: #CCC
+    background: rgba(132, 216, 245, 0.8);
 }
 
 tr:nth-child(odd) {
-    background: #DDD
+    background: rgba(106, 176, 200, 0.8);
 }
