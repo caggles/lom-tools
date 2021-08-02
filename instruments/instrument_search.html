@@ -1,0 +1,86 @@
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="resources/instrument_data.js"></script>
+        <script src="instrument_search.js"></script>
+        <link rel="stylesheet" href="instrument_search.css">
+        <title>Legend of Mana - Instrument Search</title>
+
+    </head>
+    <body>
+
+    <h1>Legend of Mana Instrument Search</h1>
+    <p>
+        Select the attributes/materials you want in an instrument.
+        Click "Get Results!" and you'll be given a list of all instrument/material/coin combinations
+        that will get you a spell with the attributes you want, with the most powerful results at the top.
+    </p>
+    <p>
+        Credit to <a href="https://essenceofsaga.wordpress.com/polpota-harbor/">Sevon</a> for an amazing instrument spreadsheet which served as the source for this data.
+    </p>
+
+    <div class="flex-container">
+        <div class="chargetime flex-child">
+            <h3>Charge Time</h3>
+            <input type="checkbox" class="chargetime" value="0.7 sec" id="charge_07" checked><label for="charge_07">0.7 sec</label><br />
+            <input type="checkbox" class="chargetime" value="1.1 sec" id="charge_11" checked><label for="charge_11">1.1 sec</label><br />
+            <input type="checkbox" class="chargetime" value="1.7 sec" id="charge_17" checked><label for="charge_17">1.7 sec</label><br />
+            <input type="checkbox" class="chargetime" value="2.8 sec" id="charge_28" checked><label for="charge_28">2.8 sec</label><br />
+            <div class="selection"><button class="select-all" name="chargetime">Select all</button><br /><button class="deselect-all" name="chargetime">De-select all</button></div>
+
+        </div>
+
+        <div class="range flex-child">
+            <h3>Range Shape</h3>
+            <input type="checkbox" class="range" value="Circle" id="range_circle"><label for="range_circle">Circle</label><br />
+            <input type="checkbox" class="range" value="Donut" id="range_donut"><label for="range_donut">Donut</label><br />
+            <input type="checkbox" class="range" value="Fan" id="range_fan"><label for="range_fan">Fan</label><br />
+            <input type="checkbox" class="range" value="Line" id="range_line"><label for="range_line">Line</label><br />
+            <input type="checkbox" class="range" value="Random" id="range_random"><label for="range_random">Random</label><br />
+            <input type="checkbox" class="range" value="Sphere" id="range_sphere"><label for="range_sphere">Sphere</label><br />
+            <input type="checkbox" class="range" value="Control" id="range_control" checked><label for="range_control">Control</label><br />
+            <div class="selection"><button class="select-all" name="range">Select all</button><br /><button class="deselect-all" name="range">De-select all</button></div>
+        </div>
+
+        <div class="firetype flex-child">
+            <h3>Trigger Type</h3>
+            <input type="checkbox" class="firetype" value="Lock" id="firetype_lock" checked><label for="firetype_lock">Lock</label><br />
+            <input type="checkbox" class="firetype" value="Fire" id="firetype_fire" checked><label for="firetype_fire">Fire</label><br />
+            <div class="selection"><button class="select-all" name="firetype">Select all</button><br /><button class="deselect-all" name="firetype">De-select all</button></div>
+            <br /><br />
+            <h3>Coin Type</h3>
+            <input type="checkbox" class="cointype" value="Gold" id="cointype_gold" checked><label for="cointype_gold">Gold</label><br />
+            <input type="checkbox" class="cointype" value="Silver" id="cointype_silver" checked><label for="cointype_silver">Silver</label><br />
+            <div class="selection"><button class="select-all" name="cointype">Select all</button><br /><button class="deselect-all" name="cointype">De-select all</button></div>
+        </div>
+
+        <div class="element flex-child">
+            <h3>Element</h3>
+            <input type="checkbox" class="element" value="Wisp" id="element_wisp" checked><label for="element_wisp">Wisp</label><br />
+            <input type="checkbox" class="element" value="Shade" id="element_shade" checked><label for="element_shade">Shade</label><br />
+            <input type="checkbox" class="element" value="Dryad" id="element_dryad" checked><label for="element_dryad">Dryad</label><br />
+            <input type="checkbox" class="element" value="Aura" id="element_aura" checked><label for="element_aura">Aura</label><br />
+            <input type="checkbox" class="element" value="Salamander" id="element_salamander" checked><label for="element_salamander">Salamander</label><br />
+            <input type="checkbox" class="element" value="Gnome" id="element_gnome" checked><label for="element_gnome">Gnome</label><br />
+            <input type="checkbox" class="element" value="Jinn" id="element_jinn" checked><label for="element_jinn">Jinn</label><br />
+            <input type="checkbox" class="element" value="Undine" id="element_undine" checked><label for="element_undine">Undine</label><br />
+            <div class="selection"><button class="select-all" name="element">Select all</button><br /><button class="deselect-all" name="element">De-select all</button></div>
+        </div>
+
+        <div class="instrument flex-child">
+            <h3>Instrument Type</h3>
+            <input type="checkbox" class="instrument" value="Drum" id="instrument_drum" checked><label for="instrument_drum">Drum</label><br />
+            <input type="checkbox" class="instrument" value="Flute" id="instrument_flute" checked><label for="instrument_flute">Flute</label><br />
+            <input type="checkbox" class="instrument" value="Harp" id="instrument_harp" checked><label for="instrument_harp">Harp</label><br />
+            <input type="checkbox" class="instrument" value="Marimba" id="instrument_marimba" checked><label for="instrument_marimba">Marimba</label><br />
+            <div class="selection"><button class="select-all" name="instrument">Select all</button><br /><button class="deselect-all" name="instrument">De-select all</button></div>
+        </div>
+    </div>
+
+        <button id="get-list">Get Results!</button>
+
+        <p id="result"></p>
+
+    </body>
+</html>

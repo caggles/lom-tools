@@ -1,0 +1,80 @@
+.flex-container {
+    display: flex;
+    border: 2px solid #AAA;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.flex-child {
+    flex: 1;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #CCC;
+}
+
+h3 {
+    margin: 0px 0px 8px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#get-list{
+    margin-top: 30px;
+    border: 2px solid #AAA;
+    background-color: #BBB;
+    -webkit-appearance: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#get-list:hover {
+  background-color: #AAA;
+}
+
+.selection {
+    margin-top: 5px;
+}
+
+.select-all, .deselect-all {
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+    font-size: 0.7em;
+    color: #555;
+}
+.select-all:hover, .deselect-all:hover {
+  color: #000;
+}
+
+button:active {
+    color: #FFF;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+
+th {
+    background-color: #888;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #CCC
+}
+
+tr:nth-child(odd) {
+    background: #DDD
+}
