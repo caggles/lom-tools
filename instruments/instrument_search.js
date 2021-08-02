@@ -88,21 +88,27 @@ function dynamicSort(property) {
 }
 
 function generateTable(objects) {
-    let keys = Object.keys(objects[0]);
-    let table_body = '<table><thead><tr>';
-    keys.forEach(function(key){
-        table_body += '<th>' + key + '</th>';
-    });
-    table_body += '</tr></thead><tbody>';
-    objects.forEach(function(object){
-        table_body += '<tr>';
-        keys.forEach(function(key){
-            table_body +='<td>';
-            table_body +=object[key];
-            table_body +='</td>';
+    if (objects.length > 0) {
+        let keys = Object.keys(objects[0]);
+        let table_body = '<table><thead><tr>';
+        keys.forEach(function (key) {
+            table_body += '<th>' + key + '</th>';
         });
-        table_body+='</tr>';
-    });
-    table_body+='</tbody></table>';
-    return table_body;
+        table_body += '</tr></thead><tbody>';
+        objects.forEach(function (object) {
+            table_body += '<tr>';
+            keys.forEach(function (key) {
+                table_body += '<td>';
+                table_body += object[key];
+                table_body += '</td>';
+            });
+            table_body += '</tr>';
+        });
+        table_body += '</tbody></table>';
+        return table_body;
+    }
+    else {
+        let body = '<div class="container"><p>The options you have selected produce no results. Sorry! :(</p></div>';
+        return body;
+    }
 }
