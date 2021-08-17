@@ -25,6 +25,26 @@ img {
     margin-right: 10px;
 }
 
+.tooltip {
+  position: relative;
+  display: block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(132, 216, 245, 1);
+    border: 1px solid #46c3ed;
+    padding: 3px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    font-size: 0.7em;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     background-image: url("resources/workshop.jpg");

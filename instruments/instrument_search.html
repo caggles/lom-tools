@@ -29,7 +29,13 @@
 
     <div class="flex-container">
         <div class="chargetime flex-child">
-            <h3>Charge Time</h3>
+            <div class="tooltip">
+                <h3>Charge Time</h3>
+                <span class="tooltiptext">
+                    The amount of time you must hold down the cast button to charge the spell to full range.
+                    Charging affects range only, not damage or effect.
+                </span>
+            </div>
             <input type="checkbox" class="chargetime" value="0.7 sec" id="charge_07" checked><label for="charge_07">0.7 sec</label><br />
             <input type="checkbox" class="chargetime" value="1.1 sec" id="charge_11" checked><label for="charge_11">1.1 sec</label><br />
             <input type="checkbox" class="chargetime" value="1.7 sec" id="charge_17" checked><label for="charge_17">1.7 sec</label><br />
@@ -39,31 +45,66 @@
         </div>
 
         <div class="range flex-child">
-            <h3>Range Shape</h3>
+            <div class="tooltip">
+                <h3>Range Shape</h3>
+                <span class="tooltiptext">
+                    The shape of the spell. <br /><br />
+                    Circle = a ring centered on the caster<br />
+                    Donut = a rotating set of 4 lines appear around the caster<br />
+                    Fan = a triangle that spreads out from the caster in the direction they are facing<br />
+                    Line = a horizontal line centered on the caster<br />
+                    Sphere = a sphere centered on the caster<br />
+                    Random = a sphere centered on a random location on the field<br />
+                    Control = a sphere with a position that can be controlled using the analog stick during casting
+                </span>
+            </div>
             <input type="checkbox" class="range" value="Circle" id="range_circle"><label for="range_circle">Circle</label><br />
             <input type="checkbox" class="range" value="Donut" id="range_donut"><label for="range_donut">Donut</label><br />
             <input type="checkbox" class="range" value="Fan" id="range_fan"><label for="range_fan">Fan</label><br />
             <input type="checkbox" class="range" value="Line" id="range_line"><label for="range_line">Line</label><br />
-            <input type="checkbox" class="range" value="Random" id="range_random"><label for="range_random">Random</label><br />
             <input type="checkbox" class="range" value="Sphere" id="range_sphere"><label for="range_sphere">Sphere</label><br />
+            <input type="checkbox" class="range" value="Random" id="range_random"><label for="range_random">Random</label><br />
             <input type="checkbox" class="range" value="Control" id="range_control" checked><label for="range_control">Control</label><br />
             <div class="selection"><button class="select-all" name="range">Select all</button><br /><button class="deselect-all" name="range">De-select all</button></div>
         </div>
 
         <div class="firetype flex-child">
-            <h3>Trigger Type</h3>
+            <div class="tooltip">
+                <h3>Trigger Type</h3>
+                <span class="tooltiptext">
+                    Lock holds targets in place during the casting animation. Fire does not.
+                </span>
+            </div>
             <input type="checkbox" class="firetype" value="Lock" id="firetype_lock" checked><label for="firetype_lock">Lock</label><br />
             <input type="checkbox" class="firetype" value="Fire" id="firetype_fire" checked><label for="firetype_fire">Fire</label><br />
             <div class="selection"><button class="select-all" name="firetype">Select all</button><br /><button class="deselect-all" name="firetype">De-select all</button></div>
             <br /><br />
-            <h3>Coin Type</h3>
+            <div class="tooltip">
+                <h3>Coin Type</h3>
+                <span class="tooltiptext">
+                    Would you prefer to use a silver or gold coin during crafting? Gold is more powerful, but also much rarer.
+                </span>
+            </div>
             <input type="checkbox" class="cointype" value="Gold" id="cointype_gold" checked><label for="cointype_gold">Gold</label><br />
             <input type="checkbox" class="cointype" value="Silver" id="cointype_silver" checked><label for="cointype_silver">Silver</label><br />
             <div class="selection"><button class="select-all" name="cointype">Select all</button><br /><button class="deselect-all" name="cointype">De-select all</button></div>
         </div>
 
         <div class="element flex-child">
-            <h3>Element</h3>
+            <div class="tooltip">
+                <h3>Element</h3>
+                <span class="tooltiptext">
+                    Element of the spell, and type of coin used during crafting.<br /><br />
+                    Wisp = Light <br />
+                    Shade = Dark <br />
+                    Dryad = Nature/Trees <br />
+                    Aura = Gold <br />
+                    Salamander = Fire <br />
+                    Gnome = Earth <br />
+                    Jinn = Air <br />
+                    Undine = Water
+                </span>
+            </div>
             <input type="checkbox" class="element" value="Wisp" id="element_wisp" checked><label for="element_wisp">Wisp</label><br />
             <input type="checkbox" class="element" value="Shade" id="element_shade" checked><label for="element_shade">Shade</label><br />
             <input type="checkbox" class="element" value="Dryad" id="element_dryad" checked><label for="element_dryad">Dryad</label><br />
@@ -76,7 +117,14 @@
         </div>
 
         <div class="instrument flex-child">
-            <h3>Instrument Type</h3>
+            <div class="tooltip">
+                <h3>Instrument Type</h3>
+                <span class="tooltiptext">
+                    Which instrument type do you want? Note that instrument type has no direct effect on combat -
+                    a Fireball spell is a Fireball spell, whether it's being cast from a flute or a drum.
+                    However, having a variety of instruments helps make it easier to collect coins.
+                </span>
+            </div>
             <input type="checkbox" class="instrument" value="Drum" id="instrument_drum" checked><label for="instrument_drum">Drum</label><br />
             <input type="checkbox" class="instrument" value="Flute" id="instrument_flute" checked><label for="instrument_flute">Flute</label><br />
             <input type="checkbox" class="instrument" value="Harp" id="instrument_harp" checked><label for="instrument_harp">Harp</label><br />
