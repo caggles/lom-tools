@@ -1,0 +1,93 @@
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: #19330d;
+}
+
+img {
+    margin-right: 30px;
+}
+
+h1 {
+    font-family: "Pacifico", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+h3 {
+    margin: 0 0 8px 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.flex-container, .container {
+    background-color: rgba(225, 245, 199, 0.8);
+    display: flex;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.flex-container {
+    padding: 5px 5px 10px 5px;
+}
+
+.container {
+    padding: 0 20px 20px 20px;
+    margin-bottom: 10px;
+}
+
+.flex-child {
+    flex: 1;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+code {
+    background-color: rgba(225, 245, 199, 0.8);
+    border: 1px solid #87ad73;
+    padding: 2px;
+}
+
+.codeblock {
+    display:inline-block;
+    font-family: monospace;
+    width: auto;
+    padding: 7px;
+    background-color: rgba(225, 245, 199, 0.8);
+    border: 1px solid #87ad73;
+}
+
+.tooltip {
+    position: relative;
+    display: block;
+    color: #247012;
+}
+
+.tooltip:hover {
+    color: #FFFFFF;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    color: #000000;
+    background-color: rgba(225, 245, 199, 0.8);
+    border: 1px solid #000000;
+    padding: 3px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    font-size: 0.7em;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.callout {
+    display:inline-block;
+    background-color: rgba(225, 245, 199, 0.5);
+    padding: 5px 15px 5px 5px;
+    margin-left: 15px;
+    border-left: 2px solid #87ad73;
+    font-style: italic;
+    font-size: 0.8em;
+}
